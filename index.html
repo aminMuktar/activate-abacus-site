@@ -4,8 +4,8 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
+    <meta name="author" content="">
+    <meta name="generator" content="">
   <title>Home</title>
     <link rel="stylesheet" type="text/css" href="lib/animate/animate.min.css">
   <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
@@ -25,11 +25,11 @@
         }
       }
 
-      
+
 
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="css/offcanvas.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -47,7 +47,7 @@
           <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./faq.html">FAQ</a>
+          <a class="nav-link" href="#">FAQ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Leaderboard</a>
@@ -65,13 +65,16 @@
           <a class="nav-link" href="#">Tutorials</a>
         </li>
       </ul>
-      
+
         <div class="bd-example">
-        
-          <button class="btn btn-outline-secondary" type="submit">Login</button>
-          <button class="btn btn-outline-secondary" type="submit">Sign Up</button>
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#loginModalCenter">
+            Login
+          </button>
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#signupModalCenter">
+            Sign Up
+          </button>
         </div>
-      
+
     </div>
   </div>
 </nav>
@@ -88,11 +91,190 @@
       </div>
     </div>
   </section>
+  <!-- modal login -->
 
+  <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 style="letter-spacing:5px; color:#fc4503"> LOGIN</h1>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end modal login -->
+  <!-- modal signup -->
+  <div class="modal fade bd-example-modal-lg" id="signupModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 style="letter-spacing:5px; color:#fc4503"> አክቲቬት የአባከስ ት/ቤት</h1>
+        </div>
+        <div class="modal-body">
+          <div class="form-container">
+          <div class="overflow-hidden p-2 p-md-4 m-md-3 text-center">
+            <form id="msform" class="mb-2 mb-uxxl-4 requires-validation" novalidate>
+            <!--fieldset 1-->
+              <div class="form-group">
+                  <div class="row g-3">
+                    <div class="mb-3 col ">
+                      <input name="" class="form-control" type="text" placeholder="የሠልጣኙ ስም" required>
+                    </div>
+                    <div class="mb-3 col">
+                      <input name="" type="text" class="form-control" placeholder="የአባት ስም" required>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="mb-3 col">
+                      <input name="" type="text" class="form-control" placeholder="የአያት ስም" required>
+                    </div>
+                    <div class="mb-3 col">
+                      <input name="" type="text" class="form-control" placeholder="የእናት ስም" required>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="mb-3 col">
+                      <input name="" type="number" class="form-control" placeholder="ዕድሜ" required>
+                    </div>
+                    <div class="mb-3 col">
+                      <select class="form-select" name="" required>
+                        <option selected disabled value="">ፆታ</option>
+                        <option value="male">ወንድ</option>
+                        <option value="female">ሴት</option>
+                      </select>
+                    </div>
+                  </div>
+
+              </div>
+            <!-- end fieldset -->
+
+          <!--fieldset 2-->
+              <div class="form-group">
+                <div class="row g-3">
+                  <div class="mb-3 col">
+                    <select class="form-select" required>
+                      <option selected disabled value="">የክፍል ደረጃ</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 col">
+                    <input type="file" class="form-control" aria-label="file example" required>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="mb-3 col">
+                    <select class="form-select" required>
+                      <option selected disabled value="">የሠልጣኙ በሶሮባን/አባከስ ያለበት ደረጃ</option>
+                      <option>Beginner</option>
+                      <option>Intermediate</option>
+                      <option>Advanced</option>
+                    </select>
+                  </div>
+                    <div class="mb-3 col">
+                      <input type="text" class="form-control" placeholder="የመኖሪያ ሰፈር ስም" required>
+                    </div>
+                </div>
+                <div class="row g-3">
+                  <div class="mb-3 col">
+                    <select class="form-select" required>
+                      <option selected disabled value="">ክ/ከተማ</option>
+                      <option>አዲስ ከተማ</option>
+                      <option>አቃቂ ቃሊቲ</option>
+                      <option>አራዳ</option>
+                      <option>ቦሌ</option>
+                      <option>ጉለሌ</option>
+                      <option>ቂርቆስ</option>
+                      <option>ኮልፌ ቀራንዮ</option>
+                      <option>ልደታ</option>
+                      <option>ንፋስ ስልክ ላፍቶ</option>
+                      <option>የካ</option>
+                      <option>ለሚ ኩራ</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 col">
+                    <input type="number" class="form-control" placeholder="ወረዳ" required>
+                  </div>
+                </div>
+              </div>
+              <!-- end fieldset 2  -->
+
+            <!--fieldset 3-->
+              <div class="form-group">
+                <div class="row g-3">
+                  <div class="mb-3 col">
+                    <input type="number" class="form-control" placeholder="የቤት ቁ." required>
+                  </div>
+                  <div class="mb-3 col">
+                    <input type="number" class="form-control" placeholder="የአባት ስልክ ቁ." required>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="mb-3 col">
+                    <input type="number" class="form-control" placeholder="የእናት ስልክ ቁ." required>
+                  </div>
+                  <div class="mb-3 col">
+                    <input type="text" class="form-control" placeholder="ድጋፍና ክትትል አድራጊ የቤተሰብ አባል ስም" required>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="mb-3 col">
+                    <input type="text" class="form-control" placeholder="ከሰልጣግኙ ጋር ያለው ዝምድና" required>
+                  </div>
+                  <div class="mb-3 col">
+                    <input type="number" class="form-control" placeholder="ስልክ ቁ." required>
+                  </div>
+                </div>
+              </div>
+              <!-- end fieldset 3 -->
+
+          <!--fieldset 4-->
+            <div class="form-group">
+                <div class="mb-3">
+                  <textarea rows="4" class="form-control" placeholder="ማወቅ ያለብን የሰልጣኙ የጤና ችግር ካለ" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <textarea rows="4" class="form-control" placeholder="ስለ ሰልጣኙ ማወቅ ያለብን ሌላ የተለየ ጉዳይ ካለ" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <textarea rows="4" class="form-control" placeholder="ልናደርግለት የሚገባ ጥንቃቄ" required></textarea>
+                </div>
+            </div>
+            <!-- <div class="col-8">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div> -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save change</button>
+            </div>
+          </form>
+        </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- end modal signup -->
 <div class="overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light for-grad">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <div class="col-md-5 p-lg-4 mx-auto my-5">
       <h2>
-        <div id="activate-txt" class="animate__animated animate__bounceInDown animate__delay-1.5s">Activate</div> 
+        <div id="activate-txt" class="animate__animated animate__bounceInDown animate__delay-1.5s">Activate</div>
         <div id="activate-subtxt" class="animate__animated animate__bounceIn animate__delay-1s">abacus/soroban training center</div>
       </h2>
       <p class="lead fw-normal txt-descHD">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
@@ -104,7 +286,7 @@
 	    </div>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
-    
+
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
 
@@ -164,11 +346,23 @@
 			</div>
 		</div>
 	</div>
-    
+
    <!--testimonials-->
    <h1 id="activate-subtxt" class="text-center">Testimonial from our clients</h1>
     <div class="drop-shadow round">
-      
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/boy-g0ac96d09c_1280.png" class="d-block rounded-circle w-25" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/boy-g0ac96d09c_1280.png" class="d-block rounded-circle w-25" alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/boy-g0ac96d09c_1280.png" class="d-block rounded-circle w-25" alt="">
+          </div>
+        </div>
+      </div>
     </div>
 
 <!---->
@@ -198,8 +392,10 @@
       </ul>
   </footer>
 </div>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/bt-validate.js"></script>
   <script src="js/offcanvas.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
 </body>
 </html>

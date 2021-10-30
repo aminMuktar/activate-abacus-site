@@ -295,8 +295,11 @@ testimonial
 	height: 500px;
 }
 #activate-txt{
+	color: #2C3646;
+	font-family: "Poppins",sans-serif;
+	font-weight: 700;
   background-size: cover;
-  color: #0d518c;
+  /* color: #fc4503; */
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
@@ -305,7 +308,8 @@ testimonial
 }
 #activate-subtxt{
   background-size: cover;
-  color: #0d518c;
+	color: #2C3646;
+	font-family: "Poppins",sans-serif;
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
